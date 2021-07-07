@@ -6,7 +6,7 @@
 点击右上角 [use this template]
 
  secrets.WEB 
- 
+ ggg
  secrets.USER 
  
  secrets.PWD 
