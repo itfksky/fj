@@ -35,6 +35,7 @@ class SspanelQd(object):
                 login_result = json.loads(response.text)
                 if login_result.get('ret') == 0:
                     print(self.base_url[i] + ' ' + '登陆失败')
+                    print(post_data)
                     continue
 
                 headers = {
