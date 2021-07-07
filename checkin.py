@@ -29,7 +29,7 @@ class SspanelQd(object):
                     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
                     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
                 }
-                print( self.email[i])
+                print( self.email)
                 post_data = 'email=' + self.email[i] + '&passwd=' + self.password[i]
                 print(post_data)
                 post_data = post_data.encode()
