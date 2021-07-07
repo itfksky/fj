@@ -30,12 +30,13 @@ class SspanelQd(object):
                 }
 
                 post_data = 'email=' + self.email[i] + '&passwd=' + self.password[i]
+                print(post_data)
                 post_data = post_data.encode()
                 response = session.post(login_url, post_data, headers=headers, verify=False)
                 login_result = json.loads(response.text)
                 if login_result.get('ret') == 0:
                     print(self.base_url[i] + ' ' + '登陆失败')
-                    print(post_data)
+                   
                     continue
 
                 headers = {
