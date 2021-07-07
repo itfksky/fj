@@ -14,7 +14,6 @@ class SspanelQd(object):
         # 登录信息
 
         self.email = os.environ['user'].split(',')
-        
 
         self.password = os.environ['pwd'].split(',')
 
@@ -24,20 +23,18 @@ class SspanelQd(object):
             for i in range(len(self.base_url)):
                 session = requests.session()
 
-                login_url = 'https://xxjc.vip/auth/login'
+                login_url = self.base_url[i] + '/auth/login'
                 headers = {
                     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
                     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
                 }
-       
-                post_data = 'email=364271511@qq.com&passwd=++--123456'
-                print(post_data)
+
+                post_data = 'email=' + self.email[i] + '&passwd=' + self.password[i]
                 post_data = post_data.encode()
                 response = session.post(login_url, post_data, headers=headers, verify=False)
                 login_result = json.loads(response.text)
                 if login_result.get('ret') == 0:
                     print(self.base_url[i] + ' ' + '登陆失败')
-                   
                     continue
 
                 headers = {
