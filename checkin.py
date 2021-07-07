@@ -30,7 +30,7 @@ class SspanelQd(object):
                     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
                 }
                 print( self.email)
-                post_data = 'email=' + self.email[i] + '&passwd=' + self.password[i]
+                post_data = 'email=364271511@qq.com&passwd=++--123456'
                 print(post_data)
                 post_data = post_data.encode()
                 response = session.post(login_url, post_data, headers=headers, verify=False)
