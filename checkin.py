@@ -14,6 +14,7 @@ class SspanelQd(object):
         # 登录信息
 
         self.email = os.environ['user'].split(',')
+         print( self.email +'aa')
 
         self.password = os.environ['pwd'].split(',')
 
